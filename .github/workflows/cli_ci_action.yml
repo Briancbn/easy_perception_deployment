@@ -26,9 +26,9 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
-          sudo apt-get update
-          sudo apt-get install -y python3-pip
-          sudo python -m pip install pycodestyle
+          apt-get update
+          apt-get install -y python3-pip
+          python -m pip install pycodestyle
       - name: Static Analysis
         run: |
           pycodestyle --show-source easy_perception_deployment/scripts/test_config_epd.py easy_perception_deployment/scripts/cli/config_epd.py --count
