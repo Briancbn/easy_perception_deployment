@@ -19,7 +19,7 @@ jobs:
       - name: Install CA Certificates
         run: |
           apt-get update
-          apt-get install -y ca-certificate
+          apt-get install -y ca-certificates
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
         with:
