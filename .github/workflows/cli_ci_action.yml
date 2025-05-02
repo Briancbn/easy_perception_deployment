@@ -18,8 +18,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install CA Certificates
         run: |
-          sudo apt-get update
-          sudo apt-get install -y ca-certificate
+          apt-get update
+          apt-get install -y ca-certificate
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
         with:
